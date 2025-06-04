@@ -12,7 +12,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: ["https://banking-backend-j46n.onrender.com"],
+    origin: ["https://banking-frontend-lh8i.onrender.com"],
     methods: ["GET", "POST"],
     credentials: true,
   })
