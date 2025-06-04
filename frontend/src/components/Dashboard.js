@@ -54,7 +54,7 @@ const Dashboard = () => {
 
     const fetchAccount = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/accounts/my-account');
+            const response = await axios.get('https://banking-backend-j46n.onrender.com/api/accounts/my-account');
             setAccount(response.data);
         } catch (error) {
             console.error('Error fetching account:', error);
@@ -63,7 +63,7 @@ const Dashboard = () => {
 
     const fetchTransactions = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/transactions/history');
+            const response = await axios.get('https://banking-backend-j46n.onrender.com/api/transactions/history');
             setTransactions(response.data);
         } catch (error) {
             console.error('Error fetching transactions:', error);
@@ -72,7 +72,7 @@ const Dashboard = () => {
 
     const handleTransaction = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/api/transactions', {
+            const response = await axios.post('https://banking-backend-j46n.onrender.com/api/transactions', {
                 type: transactionType,
                 amount: parseFloat(amount)
             });
