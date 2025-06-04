@@ -41,7 +41,7 @@ const BankerDashboard = () => {
 
     const fetchAccounts = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/accounts');
+            const response = await axios.get('https://banking-backend-j46n.onrender.com/api/accounts');
             setAccounts(response.data);
         } catch (error) {
             console.error('Error fetching accounts:', error);
@@ -52,7 +52,7 @@ const BankerDashboard = () => {
     const handleViewTransactions = async (accountNumber) => {
         try {
             setDialogLoading(true);
-            const response = await axios.get(`http://localhost:5000/api/accounts/number/${accountNumber}`); // Changed endpoint
+            const response = await axios.get(`https://banking-backend-j46n.onrender.com/api/accounts/number/${accountNumber}`); // Changed endpoint
             setSelectedAccount(response.data);
             setOpenDialog(true);
         } catch (error) {
